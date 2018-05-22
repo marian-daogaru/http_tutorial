@@ -21,12 +21,8 @@ class Blog extends Component {
         </header>
         <Route
           path='/'
-          render={() => <Posts />}
+          component={Posts}
           exact
-        />
-        <Route
-          path='/'
-          render={() => <h1>Hello</h1>}
         />
       </div>
     );
