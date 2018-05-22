@@ -1,8 +1,12 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom'
+
 
 import './Post.css';
 
-const post = (props) => (
+const post = (props) => {
+  console.log(props)
+  return (
     <article
       className="Post"
       onClick={props.clicked}
@@ -12,6 +16,7 @@ const post = (props) => (
             <div className="Author">{props.author}</div>
         </div>
     </article>
-);
+  )
+}
 
-export default post;
+export default withRouter(post);
